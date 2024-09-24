@@ -593,7 +593,7 @@ int LinuxDvbPts(Context_t  *context __attribute__((unused)), unsigned long long 
 
     if (ret != cERR_LINUXDVB_NO_ERROR) 
     {
-        if (audiofd > -1 && !ioctl(audiofd, AUDIO_GET_PTS, (void*)&sCURRENT_PTS))
+        if (audiofd > -1 && !ioctl(audiofd, VIDEO_GET_PTS, (void*)&sCURRENT_PTS))
         {
             ret = cERR_LINUXDVB_NO_ERROR;
         }
